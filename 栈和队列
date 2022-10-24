@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+const int N = 100010;
+int stk[N],top;
+//栈
+//入栈
+stk[++top] = x;
+
+//弹出
+top--;
+//判断是否为空
+if(top>0) not empty;
+else empty;
+
+//栈顶
+stk[top];
+
+//***************队列
+//队尾插入元素,队头弹出元素
+int q[N],rear = 0,top = -1;
+
+//插入
+q[++top] = x;
+//弹出 
+rear++;
+//判断队列是否为空
+if(hear<= top) not empty;
+else empty;
+
+//取出队头元素
+x = q[hear]  ;
+
+
