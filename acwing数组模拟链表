@@ -1,0 +1,31 @@
+#include<stdio.h>
+
+
+const int N = 50;
+//e[i]表示节点i的值
+//ne[i]表示节点i的next指针
+//idx存储当前已经用到了哪个点
+int head,e[N],ne[N],idx;
+
+void init(){
+    head = -1;
+    idx = 0;
+}
+
+//将x插到头节点
+void add_to_head(int x){
+    e[idx] = x;ne[idx] = head;head = idx;idx++
+}
+void add(int k ,int x){  //将X插到下标是K的之后
+    e[idx] = x;
+    ne[idx] = ne[k];
+    ne[k] = idx;
+    idx++;
+}
+void remove(int k){ //将下标是k的点后面的点删掉
+    ne[k] = ne[ne[k]];
+}
+int main()
+{
+    
+}
