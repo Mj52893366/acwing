@@ -8,13 +8,17 @@ const int N = 50;
 int head,e[N],ne[N],idx;
 
 void init(){
-    head = -1;
+    head = -1;   //-1表示为空
     idx = 0;
 }
 
 //将x插到头节点
 void add_to_head(int x){
-    e[idx] = x;ne[idx] = head;head = idx;idx++
+    e[idx] = x;ne[idx] = head;head = idx;idx++;
+}
+//将x插到尾节点
+void add_to_rear(int x){
+    e[idx] = x;ne[idx] = head;
 }
 void add(int k ,int x){  //将X插到下标是K的之后
     e[idx] = x;
@@ -27,5 +31,25 @@ void remove(int k){ //将下标是k的点后面的点删掉
 }
 int main()
 {
+    init();
+    int m;
+    scanf("%d",&m);
+    while(m--){
+        int k,x;
+        char op;
+        scanf("%s",&op);
+        if(op = 'H'){
+            scanf("%d",&x);
+            add_to_head(x);
+        }else if(op = 'D'){
+            scanf("%d",&k);
+        }else{
+            scanf("%d %d",&k,&x);
+            add(k,x);
+        }
+    }
+    for(int i = head;i!=-1;i = ne[i]) printf("%d",e[i]);
+    printf("\n");
+    return 0;
     
 }
