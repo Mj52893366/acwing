@@ -16,9 +16,10 @@ void add_to_head(int x){
     e[idx] = x;ne[idx] = head;head = idx;idx++;
 }
 //将x插到尾节点
-void add_to_rear(int x){
-    e[idx] = x;ne[idx] = -1;ne[head+1] = idx;idx++;
-}
+//int rear = -1;
+//void add_to_rear(int x){         //如果是尾插法,则需要一个尾指针
+//    e[idx] = x;ne[idx] = -1;rear = idx; ne[rear] = idx;idx++;
+//}
 void add(int k ,int x){  //将X插到下标是K的之后
     e[idx] = x;
     ne[idx] = ne[k];
